@@ -1,4 +1,4 @@
-// It must print *<br> **<br> ***<br> ****<br> *****<br>
+// 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br>🌟⭐
 <?php
 for ($row=1;$row<=5;$row++){
     for ($star=1;$star<=$row;$star++){
@@ -7,7 +7,7 @@ for ($row=1;$row<=5;$row++){
     echo "<br>";
 }
 ?>
-// It must print *<br> **<br> ***<br> ****<br> *****<br> *****<br> ****<br> ***<br> **<br> *<br>
+// 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br> *****<br> ****<br> ***<br> **<br> *<br>🌟⭐
 <?php
 for ($row=1;$row<=5; $row++){
     for ($star=1; $star<=$row; $star++){
@@ -21,4 +21,14 @@ for ($row=5; $row>=1; $row--){
     }
     echo "<br>";
 }
+?>
+//🥉third queestion to write the php program that calculates factorial of a number and pronts it.🥉
+//🤗I was asked to do that of 4 but I prefered to push of 100😍
+<?php
+$num=100;
+$factorial=1;
+for ($i=1;$i<=$num; $i++){
+    $factorial= $i* $factorial;
+}
+echo "factorial of 100 is $factorial";
 ?>
