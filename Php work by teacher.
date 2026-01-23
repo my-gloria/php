@@ -1,4 +1,4 @@
-// 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br>🌟⭐
+//1. 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br>🌟⭐
 <?php
 for ($row=1;$row<=5;$row++){
     for ($star=1;$star<=$row;$star++){
@@ -7,7 +7,7 @@ for ($row=1;$row<=5;$row++){
     echo "<br>";
 }
 ?>
-// 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br> *****<br> ****<br> ***<br> **<br> *<br>🌟⭐
+//2. 🌟⭐It must print *<br> **<br> ***<br> ****<br> *****<br> *****<br> ****<br> ***<br> **<br> *<br>🌟⭐
 <?php
 for ($row=1;$row<=5; $row++){
     for ($star=1; $star<=$row; $star++){
@@ -22,7 +22,7 @@ for ($row=5; $row>=1; $row--){
     echo "<br>";
 }
 ?>
-//🥉third queestion to write the php program that calculates factorial of a number and pronts it.🥉
+//3.🥉third queestion to write the php program that calculates factorial of a number and pronts it.🥉
 //🤗I was asked to do that of 4 but I prefered to push of 100😍
 <?php
 $num=100;
@@ -32,13 +32,13 @@ for ($i=1;$i<=$num; $i++){
 }
 echo "factorial of 100 is $factorial";
 ?>
-// to out put 01,02,0- - - -,07,08,- - - -09,10,11,12,13,14,15,- - - - ,34,35,36,- - - - ,73,74,- - - - - -,99,
+//4. to out put 01,02,0- - - -,07,08,- - - -09,10,11,12,13,14,15,- - - - ,34,35,36,- - - - ,73,74,- - - - - -,99,
 <?php
 for ($i=1; $i<100; $i++){
     echo sprintf("%02d,",$i);
 }
 ?>
-//🤗🌟⭐Print multiplication table🤗🌟⭐
+//5.🤗🌟⭐Print multiplication table🤗🌟⭐
 
 <?php
 echo '<table border="1" cellpadding="3px" cellspacing="0px">';
@@ -54,7 +54,7 @@ for ($i = 1; $i <= 6; $i++) {
 
 echo '</table>';
 ?>
-//⭐🌟🤗🫴Print chess⭐🌟🤗🫴
+//6.⭐🌟🤗🫴Print chess⭐🌟🤗🫴
 
 <?php
 for ($row = 1; $row <= 8; $row++){
@@ -71,7 +71,7 @@ echo "<td style='width:30px; height:30px; background-color:white;'></td>";
 }
 ?>
 
-//🫴🤩😍Multiples🫴🤩😍
+//7.🫴🤩😍Multiples🫴🤩😍
 
 <?php
 echo "<table border='1' cellspacing='0' cellpadding='5'>";
@@ -87,7 +87,7 @@ for ($row = 1; $row <= 10; $row++) {
 echo "</table>";
 ?>
 
-//😍⭐🌟Print h using stars😍⭐🌟
+//8.😍⭐🌟Print h using stars😍⭐🌟
 
 <?php
 $rows = 7; 
@@ -105,7 +105,7 @@ for ($i = 1; $i <= $rows; $i++) {
 }
 ?>
 
-//👌🤗🤩Enter marks print grade👌🤗🤩
+//9.👌🤗🤩Enter marks print grade👌🤗🤩
 
 <!DOCTYPE html>
 <html>
@@ -156,5 +156,56 @@ for ($i = 1; $i <= $rows; $i++) {
         echo "<p>Grade: $grade</p>";
     }
     ?>
+</body>
+</html>
+
+//10.👌🤗😍Simple calculator👌🤗😍
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator Operations</h2>
+    <form method="post">
+        First Number: <input type="number" name="num1" value="<?php if(isset($_POST['num1'])) echo $_POST['num1']; ?>"><br><br>
+        Second Number: <input type="number" name="num2" value="<?php if(isset($_POST['num2'])) echo $_POST['num2']; ?>"><br><br>
+        Result: <input type="text" name="result" value="<?php if(isset($result)) echo $result; ?>" readonly><br><br>
+        
+        <input type="submit" name="operation" value="+">
+        <input type="submit" name="operation" value="-">
+        <input type="submit" name="operation" value="*">
+        <input type="submit" name="operation" value="/">
+    </form>
+
+<?php
+if (isset($_POST['operation'])) {
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $op = $_POST['operation'];
+
+    switch ($op) {
+        case '+':
+            $result = $num1 + $num2;
+            break;
+        case '-':
+            $result = $num1 - $num2;
+            break;
+        case '*':
+            $result = $num1 * $num2;
+            break;
+        case '/':
+            if ($num2 != 0) {
+                $result = $num1 / $num2;
+            } else {
+                $result = "Division by zero!";
+            }
+            break;
+        default:
+            $result = "Invalid Operation";
+    }
+}
+?>
 </body>
 </html>
