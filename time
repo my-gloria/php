@@ -1,0 +1,8 @@
+<?php
+echo date("Y-m-d H:i:s");
+echo date("d/m/Y");
+echo date("l, F j, Y");
+echo date("D M j G:i:s T Y");
+$today = date("F j, Y, g:i a");
+echo $today;
+?>
